@@ -16,7 +16,7 @@ import com.example.urjasantulan.databinding.FragmentNotificationsBinding
 class NotificationsFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
-
+    private lateinit var adapter: ArrayAdapter<String>
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -31,7 +31,7 @@ class NotificationsFragment : Fragment() {
         val root: View = binding.root
 
         val likedItems = LikedItemsHolder.likedItems.toList()
-        val adapter = object : ArrayAdapter<String>(requireContext(), R.layout.solution_item, likedItems) {
+        adapter = object : ArrayAdapter<String>(requireContext(), R.layout.solution_item, likedItems) {
 
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
@@ -54,6 +54,11 @@ class NotificationsFragment : Fragment() {
                             buttonLike.setImageResource(R.drawable.postive_bookmark)
                         }
                     }
+
+                    adapter.clear()
+                    adapter.addAll(LikedItemsHolder.likedItems.toList())
+                    adapter.notifyDataSetChanged()
+
                 }
 
 
