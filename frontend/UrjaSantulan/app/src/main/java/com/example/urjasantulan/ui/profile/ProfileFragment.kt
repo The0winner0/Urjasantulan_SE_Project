@@ -17,6 +17,9 @@ import androidx.fragment.app.Fragment
 import com.example.urjasantulan.LikedItemsHolder
 import com.example.urjasantulan.R
 import com.example.urjasantulan.databinding.FragmentProfileBinding
+import com.example.urjasantulan.ml.SmartGridStabilityModelNew
+import org.tensorflow.lite.DataType
+import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
@@ -64,29 +67,49 @@ class ProfileFragment : Fragment() {
         val inp2EditText: EditText = root.findViewById(R.id.inp2)
         val inp3EditText: EditText = root.findViewById(R.id.inp3)
         val inp4EditText: EditText = root.findViewById(R.id.inp4)
+        val inp5EditText: EditText = root.findViewById(R.id.inp5)
+        val inp6EditText: EditText = root.findViewById(R.id.inp6)
+        val inp7EditText: EditText = root.findViewById(R.id.inp7)
+        val inp8EditText: EditText = root.findViewById(R.id.inp8)
+        val inp9EditText: EditText = root.findViewById(R.id.inp9)
+        val inp10EditText: EditText = root.findViewById(R.id.inp10)
+        val inp11EditText: EditText = root.findViewById(R.id.inp11)
+        val inp12EditText: EditText = root.findViewById(R.id.inp12)
 
-        var result = 1;
-        lastStatus.text = "Stable"
-
+        lastStatus.text = "IDK"
 
         submitButton.setOnClickListener() {
-            val inp1 = inp1EditText.text.toString()
-            val inp2 = inp2EditText.text.toString()
-            val inp3 = inp3EditText.text.toString()
-            val inp4 = inp4EditText.text.toString()
+            val inp1 = inp1EditText.text.toString().toFloat()
+            val inp2 = inp2EditText.text.toString().toFloat()
+            val inp3 = inp3EditText.text.toString().toFloat()
+            val inp4 = inp4EditText.text.toString().toFloat()
+            val inp5 = inp5EditText.text.toString().toFloat()
+            val inp6 = inp6EditText.text.toString().toFloat()
+            val inp7 = inp7EditText.text.toString().toFloat()
+            val inp8 = inp8EditText.text.toString().toFloat()
+            val inp9 = inp9EditText.text.toString().toFloat()
+            val inp10 = inp10EditText.text.toString().toFloat()
+            val inp11 = inp11EditText.text.toString().toFloat()
+            val inp12 = inp12EditText.text.toString().toFloat()
 
-            Log.i("idk", "onCreateView: $inp1, $inp2, $inp3, $inp4")
+            Log.i("", "Inputs: $inp1 $inp2 $inp3 $inp4 $inp5 $inp6 $inp7 $inp8 $inp9 $inp10 $inp11 $inp12")
 
             // Model Call
+            val model = SmartGridStabilityModelNew.newInstance(requireContext())
 
-            if (result == 1) {
-                result = 0
+            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 12), DataType.FLOAT32)
+            inputFeature0.loadArray(floatArrayOf(inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8, inp9, inp10, inp11, inp12))
+
+            val outputs = model.process(inputFeature0)
+            val outputFeature0 = outputs.outputFeature0AsTensorBuffer
+            val result = outputFeature0.floatArray[0]
+            Log.i("idk", "nEW Result: $result")
+            if(result > 2.5E-8) {
                 lastStatus.text = "Stable"
             } else {
-                result = 1
                 lastStatus.text = "Unstable"
             }
-            onCreateView(inflater, container, savedInstanceState)
+            model.close()
 
         }
 

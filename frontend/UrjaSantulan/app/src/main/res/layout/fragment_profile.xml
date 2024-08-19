@@ -127,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Input 1"
-            android:inputType="numberDecimal"
+            android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
             android:textColor="@color/white"
@@ -140,7 +140,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Input 2"
-            android:inputType="number"
+            android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
             android:textColor="@color/white"
@@ -153,7 +153,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Input 3"
-            android:inputType="number"
+            android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
             android:textColor="@color/white"
@@ -166,7 +166,111 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Input 4"
-            android:inputType="number"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 5"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 6"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 7"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 8"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 9"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 10"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 11"
+            android:inputType="numberSigned|numberDecimal"
+            android:padding="15dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"/>
+
+        <EditText
+            android:id="@+id/inp12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input 12"
+            android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
             android:textColor="@color/white"
