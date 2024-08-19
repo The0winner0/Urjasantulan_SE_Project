@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.urjasantulan.LikedItemsHolder
@@ -49,6 +50,7 @@ class NotificationsFragment : Fragment() {
                         if (LikedItemsHolder.likedItems.contains(item)) {
                             LikedItemsHolder.likedItems.remove(item)
                             buttonLike.setImageResource(R.drawable.negative_bookmark)
+                            Toast.makeText(requireContext(), "Bookmark Removed", Toast.LENGTH_SHORT).show()
                         } else {
                             LikedItemsHolder.likedItems.add(item)
                             buttonLike.setImageResource(R.drawable.postive_bookmark)

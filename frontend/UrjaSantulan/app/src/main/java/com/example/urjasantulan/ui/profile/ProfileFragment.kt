@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.urjasantulan.LikedItemsHolder
 import com.example.urjasantulan.R
@@ -125,9 +126,11 @@ class ProfileFragment : Fragment() {
                         if (LikedItemsHolder.likedItems.contains(item)) {
                             LikedItemsHolder.likedItems.remove(item)
                             buttonLike.setImageResource(R.drawable.negative_bookmark)
+                            Toast.makeText(requireContext(), "Bookmark Removed", Toast.LENGTH_SHORT).show()
                         } else {
                             LikedItemsHolder.likedItems.add(item)
                             buttonLike.setImageResource(R.drawable.postive_bookmark)
+                            Toast.makeText(requireContext(), "Bookmark Added", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
