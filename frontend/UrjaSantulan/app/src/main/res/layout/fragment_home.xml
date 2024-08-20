@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:orientation="vertical">
 
     <!-- Trending Title -->
     <TextView
         android:id="@+id/textTrending"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Trending"
         android:textColor="@color/white"
@@ -22,47 +23,56 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Buttons Layout -->
-    <LinearLayout
-        android:id="@+id/btnLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/textTrending"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/btnSolar"
+    <HorizontalScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/btnLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SOLAR"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/button_background" />
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/textTrending"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/btnWind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WIND"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/button_background" />
+            <Button
+                android:id="@+id/btnSolar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOLAR"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_background" />
 
-        <Button
-            android:id="@+id/btnWater"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WATER"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/button_background" />
+            <Button
+                android:id="@+id/btnWind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WIND"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_background" />
 
-        <Button
-            android:id="@+id/btnThermal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="THERMAL"
-            android:background="@drawable/button_background" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WATER"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:id="@+id/btnThermal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THERMAL"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_background" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <!-- RecyclerView for Articles -->
     <androidx.recyclerview.widget.RecyclerView
@@ -70,9 +80,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="16dp"
-        app:layout_constraintTop_toBottomOf="@id/btnLayout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_weight="1"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

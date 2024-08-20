@@ -40,7 +40,7 @@ class NewsArticleAdapter : ListAdapter<Article, NewsArticleAdapter.ArticleViewHo
     }
 
     class DiffCallback : DiffUtil.ItemCallback<Article>() {
-        override fun areItemsTheSame(oldItem: Article, newItem: Article) = oldItem.id == newItem.id
+        override fun areItemsTheSame(oldItem: Article, newItem: Article) = oldItem.title == newItem.title
         override fun areContentsTheSame(oldItem: Article, newItem: Article) = oldItem == newItem
     }
 }
