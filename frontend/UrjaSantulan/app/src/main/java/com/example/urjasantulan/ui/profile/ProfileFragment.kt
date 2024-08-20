@@ -1,5 +1,6 @@
 package com.example.urjasantulan.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -16,8 +17,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.urjasantulan.LikedItemsHolder
 import com.example.urjasantulan.R
+import com.example.urjasantulan.SignInActivity
 import com.example.urjasantulan.databinding.FragmentProfileBinding
 import com.example.urjasantulan.ml.SmartGridStabilityModelNew
+import com.google.firebase.auth.FirebaseAuth
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 
@@ -27,6 +30,8 @@ class ProfileFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     private fun adjustListViewHeightBasedOnItems(listView: ListView) {
         val listAdapter = listView.adapter ?: return
@@ -75,8 +80,16 @@ class ProfileFragment : Fragment() {
         val inp10EditText: EditText = root.findViewById(R.id.inp10)
         val inp11EditText: EditText = root.findViewById(R.id.inp11)
         val inp12EditText: EditText = root.findViewById(R.id.inp12)
+        val logoutButton: Button = root.findViewById(R.id.logoutButton)
 
         lastStatus.text = "IDK"
+
+        logoutButton.setOnClickListener() {
+            firebaseAuth = FirebaseAuth.getInstance()
+            firebaseAuth.signOut()
+            val intent = Intent(requireContext(), SignInActivity::class.java)
+            startActivity(intent)
+        }
 
         submitButton.setOnClickListener() {
             val inp1 = inp1EditText.text.toString().toFloat()
@@ -106,8 +119,10 @@ class ProfileFragment : Fragment() {
             Log.i("idk", "nEW Result: $result")
             if(result > 2.5E-8) {
                 lastStatus.text = "Stable"
+                lastStatus.setBackgroundResource(R.drawable.result_text)
             } else {
                 lastStatus.text = "Unstable"
+                lastStatus.setBackgroundResource(R.drawable.result_text2)
             }
             model.close()
 

@@ -202,7 +202,7 @@ class HomeFragment : Fragment() {
                     imageUrl = "https://nevadacurrent.com/wp-content/uploads/2023/09/SolarRC_002.JPG-Ronda-1536x989.jpg"
                 )
             ).shuffled()         // Shuffle the list
-                .take(2)
+                .take(3)
             "wind" -> listOf(
                 Article(
                     title = "Are US wind farms killing thousands of birds?",
@@ -304,7 +304,7 @@ class HomeFragment : Fragment() {
                     description = "Three of five turbines have returned to the Hywind Scotland floating offshore wind farm in the North Sea amid an ongoing shutdown of operations ...",
                     imageUrl = "https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/1272/cached.offlinehbpl.hbpl.co.uk/news/OPW/Equinormajority-ownstheHywindScotlandprojectintheScottishNorthSea(piccredit%C3%98yvindGrava%CC%8AsWoldcam)).png"
                 )
-            ).shuffled().take(2)
+            ).shuffled().take(3)
             "water" -> listOf(
                 Article(
                     title =  "'Lacking information': Chile regulator kicks back Colbun's 800MW pumped hydro project environmental review",
@@ -467,7 +467,7 @@ class HomeFragment : Fragment() {
                     description = "Researchers from China's Harbin Institute of Technology proposed to combine pumped hydro storage systems with compressed air energy storage ( ...",
                     imageUrl =  "https://www.pv-magazine.com/wp-content/uploads/2024/05/Unbenannt-final.jpg",
                 )
-            ).shuffled().take(2)
+            ).shuffled().take(3)
             "thermal" -> listOf(
                 Article(
                     title = "Ice Thermal Energy Storage Market to Reach $442.9 Billion, Globally, by 2030 at 12.6% CAGR: Allied Market Research",
@@ -571,7 +571,7 @@ class HomeFragment : Fragment() {
                     imageUrl = "https://media.zenfs.com/en/newsfile_64/67a76ca4a7e3bfa082e4596c9e2c385c"
                 )
             ).shuffled()
-                .take(2)
+                .take(3)
             else -> emptyList()  // In case the tag doesn't match any of the predefined categories.
         }
     }

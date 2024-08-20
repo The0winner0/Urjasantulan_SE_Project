@@ -5,9 +5,13 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.widget.VideoView
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashScreen : AppCompatActivity() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,18 +23,24 @@ class SplashScreen : AppCompatActivity() {
         val uri = Uri.parse(videoPath)
         videoView.setVideoURI(uri)
 
-        videoView.setOnCompletionListener {
-            navigateToMainActivity()
-        }
 
         videoView.start()
 
-        // Backup plan to proceed after 4 seconds in case the video doesn't trigger completion
-        Handler().postDelayed({
-            if (!videoView.isPlaying) {
+        firebaseAuth = FirebaseAuth.getInstance()
+        val user = firebaseAuth.currentUser
+
+        videoView.setOnCompletionListener {
+            if(user != null){
+                Log.d("SplashScreen", "User is already logged in")
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            else {
+                Log.d("SplashScreen", "User is not logged in")
                 navigateToMainActivity()
             }
-        }, 4000) // 4 seconds
+        }
     }
 
     private fun navigateToMainActivity() {

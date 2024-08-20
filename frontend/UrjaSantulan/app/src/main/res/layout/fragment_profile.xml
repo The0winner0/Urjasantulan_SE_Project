@@ -81,14 +81,14 @@
             android:textAllCaps="true"
             android:textColor="#82E46D" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="15dp"
-            android:text="Whooo, System is Stable!"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:textColor="@color/white" />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginVertical="15dp"-->
+<!--            android:text="Whooo, System is Stable!"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textColor="@color/white" />-->
 
         <TextView
             android:layout_gravity="center"
@@ -97,7 +97,7 @@
             android:text="Overview"
             android:textAlignment="center"
             android:textSize="50dp"
-            android:layout_marginVertical="20dp"
+            android:layout_marginVertical="25dp"
             android:paddingHorizontal="20dp"
             android:background="@drawable/overview_text"
             android:fontFamily="@font/poppins_regular"
@@ -122,11 +122,19 @@
             android:background="@drawable/overview_text"
             android:textColor="@color/white" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*Inputs description is in About Us"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"/>
+
+
         <EditText
             android:id="@+id/inp1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 1"
+            android:hint="tau 1"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -139,7 +147,7 @@
             android:id="@+id/inp2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 2"
+            android:hint="tau 2"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -152,7 +160,7 @@
             android:id="@+id/inp3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 3"
+            android:hint="tau 3"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -165,7 +173,7 @@
             android:id="@+id/inp4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 4"
+            android:hint="tau 4"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -178,7 +186,7 @@
             android:id="@+id/inp5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 5"
+            android:hint="p1"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -191,7 +199,7 @@
             android:id="@+id/inp6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 6"
+            android:hint="p2"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -204,7 +212,7 @@
             android:id="@+id/inp7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 7"
+            android:hint="p3"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -217,7 +225,7 @@
             android:id="@+id/inp8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 8"
+            android:hint="p4"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -230,7 +238,7 @@
             android:id="@+id/inp9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 9"
+            android:hint="g1"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -243,7 +251,7 @@
             android:id="@+id/inp10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 10"
+            android:hint="g2"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -256,7 +264,7 @@
             android:id="@+id/inp11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 11"
+            android:hint="g3"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -269,7 +277,7 @@
             android:id="@+id/inp12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input 12"
+            android:hint="g4"
             android:inputType="numberSigned|numberDecimal"
             android:padding="15dp"
             android:background="@drawable/edittext_background"
@@ -309,6 +317,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/solution_item" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LogOut"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="120dp"
+            android:layout_marginVertical="16dp"/>
+        <!--        android:background="@drawable/sui_button"-->
 
     </LinearLayout>
 

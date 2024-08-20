@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "334786828736",
+    "project_id": "urjasantulan-fb61f",
+    "storage_bucket": "urjasantulan-fb61f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334786828736:android:2ccab32ef26f848b62d025",
+        "android_client_info": {
+          "package_name": "com.example.urjasantulan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS_-PdSpuRaTD6sNSmG45Rv6-XCY2c69Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

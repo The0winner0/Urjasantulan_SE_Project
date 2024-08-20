@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@color/black"
-    tools:context=".SignInActivity">
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp"
+android:background="@color/black"
+tools:context=".SignUpActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:paddingTop="25dp"
@@ -59,31 +59,37 @@
             android:layout_marginBottom="20dp"/>
         <!--        android:drawableLeft="@drawable/ic_lock"-->
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Forgot Password?"-->
-<!--            android:textColorHighlight="#3A82EF"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="18dp" />-->
+        <EditText
+            android:id="@+id/cpasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/white"
+            android:textColorHint="#888"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="20dp"/>
+        <!--        android:drawableLeft="@drawable/ic_lock"-->
+
 
         <!-- Login Button -->
         <Button
-            android:id="@+id/loginButton"
+            android:id="@+id/signupButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="SignUp"
             android:background="@drawable/button_bg"
             android:padding="12dp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
 
         <TextView
-            android:id="@+id/ifNotRegistered"
+            android:id="@+id/ifAlreadyHaveAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Don't have an account? Sign Up"
+            android:text="Already have an account? Sign In"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:paddingTop="15dp"
@@ -107,10 +113,10 @@
 <!--            android:textSize="16sp" />-->
 
 <!--        <Button-->
-<!--            android:id="@+id/googleSignInButton"-->
+<!--            android:id="@+id/googleSignUpButton"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:text="Sign in with Google"-->
+<!--            android:text="Sign Up with Google"-->
 <!--            android:textColor="@android:color/white"-->
 <!--            android:drawablePadding="8dp"-->
 <!--            android:padding="12dp"-->
