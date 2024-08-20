@@ -1,37 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".ui.dashboard.DashboardFragment">
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/aboutHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Us"
-        android:textColor="@color/white"
-        android:textSize="55dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144" />
-
-    <TextView
-        android:id="@+id/text_dashboard"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintTop_toBottomOf="@id/aboutHeader"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        tools:context=".ui.dashboard.DashboardFragment">
+
+        <TextView
+            android:id="@+id/aboutHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="About Us"
+            android:layout_gravity="center"
+            android:textColor="@color/green"
+            android:textSize="54dp"
+            android:layout_marginTop="22dp"         />
+
+
+        <TextView
+            android:id="@+id/text_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:text="Empowering a Sustainable and Stable Future"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_descip1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="At UrjaSantulan, our mission is to revolutionize grid stability by harnessing the power of AI and advanced predictive analytics. We provide personalized insights that ensure continuous, reliable power for every user, whether you're an energy producer or consumer."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Our Technology"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_descrip2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="UrjaSantulan uses a set of predictive features to analyze and stabilize the grid:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Inputs (Tau1 to Tau4)"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_descrip3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Tau 1 corresponds to the supplier node Tau 2 to Tau 4 correspond to the consumer nodes. These values represent the reaction time of each network participant, ranging from 0.5 to 10."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Inputs (P1 to P4)"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_descrip4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="These denote the nominal power either produced (positive) or consumed (negative) by each participant. The values for consumers range from -2.0 to -0.5, reflecting the varying energy demands and contributions of each node."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_text5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Inputs (G1 to G4)"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_descrip5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text=" These are the price elasticity coefficients, ranging from 0.05 to 1.00, indicating how sensitive each participant is to changes in electricity prices. G1 corresponds to the supplier node. G2 to G4 correspond to the consumer nodes."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_text6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Our Commitment to Innovation"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_descrip6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="We are committed to using the most advanced predictive models to keep your power systems stable. Our team constantly refines these models, incorporating the latest research in AI and power systems to provide you with accurate, actionable insights."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_text7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Get in Touch"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text_descrip7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Have questions or want to learn more about our technology? Feel free to reach out in case of any issue at our Github!"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/footer" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
