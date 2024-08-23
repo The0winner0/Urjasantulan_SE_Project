@@ -24,5 +24,4 @@ Our app, "Urjasantulan," helps predict the stability of electricity consumption 
 - **App Development:** Kotlin and Android Studio
 - **Machine Learning:** Python and Deep Learning
 - **API Integration:** For retrieving grid system information
-- **Additional Technologies:** As suggested by IEEE 1547
 
